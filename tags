@@ -1,0 +1,32 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CURL_BUF_MAX_LEN	003__IMX6侧源码/http/http.c	35;"	d	file:
+CURL_METHOD_GET	003__IMX6侧源码/http/http.c	/^    CURL_METHOD_GET  = 1,  $/;"	e	enum:curl_method	file:
+CURL_METHOD_POST	003__IMX6侧源码/http/http.c	/^    CURL_METHOD_POST = 2,  $/;"	e	enum:curl_method	file:
+CURL_NAME_MAX_LEN	003__IMX6侧源码/http/http.c	36;"	d	file:
+CURL_URL_MAX_LEN	003__IMX6侧源码/http/http.c	37;"	d	file:
+create_dir	003__IMX6侧源码/http/http.c	/^int create_dir(const char *sPathName)  $/;"	f
+curl_http_args_st	003__IMX6侧源码/http/http.c	/^struct curl_http_args_st  $/;"	s	file:
+curl_http_get	003__IMX6侧源码/http/http.c	/^int curl_http_get(struct curl_http_args_st *args)  $/;"	f
+curl_http_post	003__IMX6侧源码/http/http.c	/^int curl_http_post(struct curl_http_args_st *args)  $/;"	f
+curl_method	003__IMX6侧源码/http/http.c	/^    int  curl_method;                   \/\/ curl 方法命令,enum curl_method  $/;"	m	struct:curl_http_args_st	file:
+curl_method	003__IMX6侧源码/http/http.c	/^enum curl_method  $/;"	g	file:
+curl_printf	003__IMX6侧源码/http/http.c	33;"	d	file:
+curl_write_data_cb	003__IMX6侧源码/http/http.c	/^size_t curl_write_data_cb(void *buffer, size_t size, size_t nmemb, void *stream)  $/;"	f
+data	003__IMX6侧源码/http/http.c	/^    char *data;                         \/\/ 文件数据保存在内存中的指针, 用完后手动free   $/;"	m	struct:curl_http_args_st	file:
+data_len	003__IMX6侧源码/http/http.c	/^    int  data_len;                      \/\/ 文件数据保存在内存中的长度  $/;"	m	struct:curl_http_args_st	file:
+file_fd	003__IMX6侧源码/http/http.c	/^    FILE *file_fd;                      \/\/ 文件所指向的描述符, 用完后需要手动fclose  $/;"	m	struct:curl_http_args_st	file:
+file_name	003__IMX6侧源码/http/http.c	/^    char file_name[CURL_NAME_MAX_LEN];  \/\/ 返回数据保存为文件  $/;"	m	struct:curl_http_args_st	file:
+init_locks	003__IMX6侧源码/http/http.c	/^static void init_locks(void)  $/;"	f	file:
+kill_locks	003__IMX6侧源码/http/http.c	/^static void kill_locks(void)  $/;"	f	file:
+lock_callback	003__IMX6侧源码/http/http.c	/^static void lock_callback(int mode, int type, char *file, int line)  $/;"	f	file:
+lockarray	003__IMX6侧源码/http/http.c	/^static pthread_mutex_t *lockarray;  $/;"	v	file:
+main	003__IMX6侧源码/http/http.c	/^int main(int argc, char **argv)  $/;"	f
+post_data	003__IMX6侧源码/http/http.c	/^    char post_data[CURL_BUF_MAX_LEN];   \/\/ POST 表单数据  $/;"	m	struct:curl_http_args_st	file:
+post_file	003__IMX6侧源码/http/http.c	/^    char post_file[CURL_NAME_MAX_LEN];  \/\/ POST 文件名  $/;"	m	struct:curl_http_args_st	file:
+thread_id	003__IMX6侧源码/http/http.c	/^static unsigned long thread_id(void)  $/;"	f	file:
+url	003__IMX6侧源码/http/http.c	/^    char url[CURL_URL_MAX_LEN];         \/\/ URL   $/;"	m	struct:curl_http_args_st	file:
