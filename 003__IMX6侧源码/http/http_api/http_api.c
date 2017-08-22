@@ -213,7 +213,7 @@ int curl_http_get(struct curl_http_args_st *args)
       
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, args);    // 设置回调函数的第4 个参数  
       
-   <span style="white-space:pre"> </span>curl_easy_setopt(curl, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);  //设置为ipv4类型  
+    curl_easy_setopt(curl, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);  //设置为ipv4类型  
       
     curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 30);     //设置连接超时，单位s, CURLOPT_CONNECTTIMEOUT_MS 毫秒  
   
@@ -256,7 +256,7 @@ int curl_http_post(struct curl_http_args_st *args)
     CURLcode return_code;  
     struct curl_httppost *formpost = NULL;  // POST 需要的参数  
     struct curl_httppost *lastptr  = NULL;  
-    <span style="white-space:pre">    </span>int ret = -1;  
+    int ret = -1;  
     int post_type = 1; // POST 可以有三种方法  
   
     // 如果要保存为文件, 先建立文件目录  
@@ -268,7 +268,7 @@ int curl_http_post(struct curl_http_args_st *args)
     if (!curl)  
     {  
         curl_printf("%s[%d]: curl easy init failed\n", __FUNCTION__, __LINE__);  
-        return ret;;  
+        return ret;  
     }  
   
     if (strncmp(args->url, "https://", 8) == 0)  
@@ -296,7 +296,7 @@ int curl_http_post(struct curl_http_args_st *args)
       
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, args);    // 设置回调函数的第4 个参数  
       
-    <span style="white-space:pre">    </span>curl_easy_setopt(curl, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);  //设备为ipv4类型  
+    curl_easy_setopt(curl, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);  //设备为ipv4类型  
       
     curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 30);     //设置连接超时，单位s, CURLOPT_CONNECTTIMEOUT_MS 毫秒  
   
@@ -327,7 +327,7 @@ int curl_http_post(struct curl_http_args_st *args)
         // 添加上传文件,  //Content-Disposition: form-data; name="file"; filename="1.jpg".,   filename为指定的名字, content-type 为默认curl识别的  
         //curl_formadd(&formpost, &lastptr, CURLFORM_PTRNAME, "file", CURLFORM_FILE, err_file, CURLFORM_FILENAME, "1.jpg", CURLFORM_END);   
         // 添加上传文件,  //Content-Disposition: form-data; name="file"; filename="1.jpg".,   filename为指定的名字, content-type为指定的类型  
-        curl_formadd(&formpost, &lastptr, CURLFORM_PTRNAME, "file", CURLFORM_FILE, err_file, CURLFORM_FILENAME, "1.jpg", CURLFORM_CONTENTTYPE, "image/jpeg", CURLFORM_END);  
+        //curl_formadd(&formpost, &lastptr, CURLFORM_PTRNAME, "file", CURLFORM_FILE, err_file, CURLFORM_FILENAME, "1.jpg", CURLFORM_CONTENTTYPE, "image/jpeg", CURLFORM_END);  
   
         // 引用页:  http://blog.csdn.net/zxgfa/article/details/8302059  
         curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);  
